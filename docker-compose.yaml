@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  contagem-objetos:
+    build: .
+    volumes:
+      - ./imagens:/app/imagens  # Mapeando a pasta local diretamente para o container
+    working_dir: /app
+    command: ["python", "script.py"]
